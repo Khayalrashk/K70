@@ -10,13 +10,13 @@ from MatrixMusic import app
 from config import OWNER_ID, LOGGER_ID
 
 
-@app.on_message(command(["ميوزك", "الميوزك", "الاوامر"]))
+@app.on_message(command(["ميوزك", "اوامر", "الاوامر"]))
 async def zdatsr(client: Client, message: Message):
     usr = await client.get_users(OWNER_ID)
     name = usr.first_name
     usrnam = usr.username
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/342bad57d5d870a4b5163.jpg",
+        photo=f"https://telegra.ph/file/f698f60484b7aef0d6f29.jpg",
         caption=f"""<b>↯︙مرحباً بك عزيزي</b>\n<b>↯︙استخدم الازرار بالاسفل\n» ل تصفح اوامر الميوزك</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -35,7 +35,7 @@ async def zdatsr(client: Client, message: Message):
                     InlineKeyboardButton(name, url=f"https://t.me/{usrnam}"),
                 ],[
                     InlineKeyboardButton(
-                        "‹ 𝖬𝖺𝖳𝗋𝗂x 𝖳𝖾𝖠𝗆 ›", url="https://t.me/XMATTMX"),
+                        "‹ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗔𝗟𝗣𝗢𝗣 ›", url="https://t.me/SOURCE_ALPOP"),
                 ],
             ]
         ),
