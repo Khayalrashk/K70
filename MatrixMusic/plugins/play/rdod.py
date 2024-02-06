@@ -161,7 +161,7 @@ async def my(_, message):
      else:
         await message.reply(bio)
 
-@app.on_message(filters.regex("^نبذتي$"))
+@app.on_message(filters.regex("^بايو$"))
 async def Bio(_, message):
     if not message.reply_to_message:
      me = message.from_user.id
@@ -169,7 +169,7 @@ async def Bio(_, message):
      bio = b.bio
      await message.reply_text(bio)
 	
-@app.on_message(filters.regex("^نبذته$"))
+@app.on_message(filters.regex("^بايو$"))
 async def Bio(_, message):
 	if message.reply_to_message:
 		user_id = message.reply_to_message.from_user.id
