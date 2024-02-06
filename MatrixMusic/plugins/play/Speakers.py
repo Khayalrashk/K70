@@ -7,7 +7,7 @@ from MatrixMusic.core.call import Zelzaly
 from MatrixMusic.utils.database import *
 from pytgcalls.exceptions import (NoActiveGroupCall,TelegramServerError)
 
-@app.on_message(filters.regex("المتكلمين"))
+@app.on_message(filters.regex("مين في الكول"))
 async def strcall(client, message):
     assistant = await group_assistant(Zelzaly,message.chat.id)
     try:
