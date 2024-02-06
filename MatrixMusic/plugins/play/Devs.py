@@ -33,12 +33,12 @@ def get_file_id(msg: Message):
                 return obj
 
 @app.on_message(
-    command(["المطور احمد","الكاتب"])
+    command(["المطور","البوب","امير","مطور السورس","مبرمج السورس"])
     & filters.group
   
 )
 async def yas(client, message):
-    usr = await client.get_chat("HH3C4")
+    usr = await client.get_chat("VIP_ALPOP")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
     await message.reply_photo(photo,       caption=f"– – – – – – – – – – – – – – – – – –\n↯︙𝖣𝖾𝗏 ↬ ⦗ {name} ⦘\n↯︙𝖴𝗌𝖤𝗋 ↬ ⦗ @{usr.username} ⦘\n↯︙𝖨𝖣 ↬ ⦗ {usr.id} ⦘\n↯︙𝖡𝗂𝖮 ↬ ⦗ {usr.bio} ⦘\n– – – – – – – – – – – – – – – – – –",  
@@ -53,12 +53,12 @@ async def yas(client, message):
     )
     
 @app.on_message(
-    command(["المطور اللواء"])
+    command(["المطور مارو","مارو","المبرمج"])
     & filters.group
   
 )
 async def yas(client, message):
-    usr = await client.get_chat("R_0_0_0")
+    usr = await client.get_chat("j_s_9")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
     await message.reply_photo(photo,       caption=f"– – – – – – – – – – – – – – – – – –\n↯︙𝖣𝖾𝗏 ↬ ⦗ {name} ⦘\n↯︙𝖴𝗌𝖤𝗋 ↬ ⦗ @{usr.username} ⦘\n↯︙𝖨𝖣 ↬ ⦗ {usr.id} ⦘\n↯︙𝖡𝗂𝖮 ↬ ⦗ {usr.bio} ⦘\n– – – – – – – – – – – – – – – – – –",  
@@ -73,24 +73,24 @@ async def yas(client, message):
     )
     
 @app.on_message(
-    command(["مطورين","مطورين السورس","المطورين"])
+    command(["مطورين","مطورين السورس","المطورين","سورس","السورس"])
   
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/dcb95c105123fb71169ee.jpg",
-        caption=f"""↯︙اهلا بك عزيزي {message.from_user.mention}\n↯︙مطورين سورس ماتركس ميوزك""",
+        photo=f"https://telegra.ph/file/f698f60484b7aef0d6f29.jpg",
+        caption=f"""↯︙اهلا بك عزيزي {message.from_user.mention}\n↯︙مطورين سورس البوب ميوزك""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "‹ : 𝖣𝖾𝗏 : ›", url=f"https://t.me/HH3C4"), 
+                        "‹ : 𝗗𝗘𝗩 𝗔𝗟𝗣𝗢𝗣 : ›", url=f"https://t.me/VIP_ALPOP"), 
                  ],[
                     InlineKeyboardButton(
-                        "‹ : 𝖣𝖾𝗏² : ›", url=f"https://t.me/R_0_0_0"),
+                        "‹ : 𝗗𝗘𝗩 𝗠𝗔𝗥𝗢² : ›", url=f"https://t.me/j_s_9"),
                 ],[
                     InlineKeyboardButton(
-                        "‹ : 𝖬𝖺𝖳𝗋𝗂x 𝖳𝖾𝖠𝗆 : ›", url=f"https://t.me/XMATTMX"),
+                        "‹ : 𝗦𝗢𝗨𝗥𝗖𝗘 𝗔𝗟𝗣𝗢𝗣 : ›", url=f"https://t.me/SOURCE_ALPOP"),
                 ],
 
             ]
