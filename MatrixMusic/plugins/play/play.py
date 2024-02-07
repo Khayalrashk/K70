@@ -33,7 +33,7 @@ from config import BANNED_USERS, lyrical
             "تشغيل",
             "تش",
             "/play",
-            "/vplay",
+            "/vplay","فيديو",
             "/cplay",
             "/cvplay",
             "/playforce",
