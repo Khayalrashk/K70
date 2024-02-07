@@ -1,3 +1,13 @@
+import random
+import re
+import requests
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
+from config import BOT_TOKEN
+from database import set_db_waitg, get_db_waitg, del_db_waitg, set_db_mypointgame
+from MatrixMusic.plugins.play.locks import lock_games_test, set_db_wait, lock_myphoto_test
+
+
 if m.text == "عقاب" or m.text == "لعبه عقاب" or m.text == "لعبة عقاب" or m.text == "العاب عقاب":
         if not lock_games_test(m):
             eqab = [
