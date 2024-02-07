@@ -7,9 +7,8 @@ from config import BOT_TOKEN
 from database import set_db_waitg, get_db_waitg, del_db_waitg, set_db_mypointgame
 from MatrixMusic.plugins.play.locks import lock_games_test, set_db_wait, lock_myphoto_test
 
-if m.text == "عقاب" or m.text == "لعبه عقاب" or m.text == "لعبة عقاب" or m.text == "العاب عقاب":
-        if not lock_games_test(m):
-            eqab = [
+async def some_function(m):
+    eqab = [
                     
                 "↯︙صورة وجهك او رجلك او خشمك او يدك\n↯",
                 "↯︙اصدر اي صوت يطلبه منك الاعبين\n↯",
@@ -64,6 +63,9 @@ if m.text == "عقاب" or m.text == "لعبه عقاب" or m.text == "لعبة 
                 "↯︙ تروح عند شخص تقول له احبك\n↯"
 
             ]
-            await m.reply_text(random.choice(eqab), reply_to_message_id=m.message_id)
-            set_db_wait("eqab", m.from_user.id, m.chat.id)
-      
+           await m.reply_text(random.choice(eqab), reply_to_message_id=m.message_id)
+    set_db_wait("eqab", m.from_user.id, m.chat.id)
+
+if m.text == "عقاب" or m.text == "لعبه عقاب" or m.text == "لعبة عقاب" or m.text == "العاب عقاب":
+    if not lock_games_test(m):
+        await some_function(m)
