@@ -63,7 +63,7 @@ async def some_function(m):
                 "↯︙ تروح عند شخص تقول له احبك\n↯"
 
             ]
-           await m.reply_text(random.choice(eqab), reply_to_message_id=m.message_id)
+          await m.reply_text(random.choice(eqab), reply_to_message_id=m.message_id)
     set_db_wait("eqab", m.from_user.id, m.chat.id)
 
 if m.text == "عقاب" or m.text == "لعبه عقاب" or m.text == "لعبة عقاب" or m.text == "العاب عقاب":
