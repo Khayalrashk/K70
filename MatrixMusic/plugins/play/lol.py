@@ -67,5 +67,4 @@ if m.text == "عقاب" or m.text == "لعبه عقاب" or m.text == "لعبة 
             ]
             await m.reply_text(random.choice(eqab), reply_to_message_id=m.message_id)
             set_db_wait("eqab", m.from_user.id, m.chat.id)
-        else:
-            await m.reply_text("↯︙الالعاب معطله يرجى تفعيلها اولا\n↯", reply_to_message_id=m.message_id)
+      
