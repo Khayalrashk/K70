@@ -11,7 +11,7 @@ from MatrixMusic.plugins.play.locks import lock_games_test, set_db_wait, lock_my
 if m.text == "عقاب" or m.text == "لعبه عقاب" or m.text == "لعبة عقاب" or m.text == "العاب عقاب":
         if not lock_games_test(m):
             eqab = [
-
+                    
                 "↯︙صورة وجهك او رجلك او خشمك او يدك\n↯",
                 "↯︙اصدر اي صوت يطلبه منك الاعبين\n↯",
                 "↯︙سكر خشمك و قول كلمة من اختيار الاعبين الي معك\n↯",
