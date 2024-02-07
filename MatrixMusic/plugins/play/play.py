@@ -31,7 +31,7 @@ from config import BANNED_USERS, lyrical
         [
             "شغل",
             "تشغيل",
-            "فيديو",
+            "تش",
             "/play",
             "فيديو",
             "/cplay",
