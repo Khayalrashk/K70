@@ -7,6 +7,7 @@ from MatrixMusic import app
 # Replace the following line with your actual OWNER_ID
 OWNER_ID = 123456789
 
+
 @app.on_message(filters.command(['بوت'], prefixes=""))
 async def Italymusic(client: Client, message: Message):
     me = await client.get_me()
@@ -33,9 +34,10 @@ async def Italymusic(client: Client, message: Message):
         print(e)
         rank = "مش عرفنلو مله ده😒"
     
-    photos_count = await client.get_chat_photos_count("me")
+    photos_count = await client.get_profile_photos_count("me")
     if photos_count > 0:
-        photos = await client.get_profile_photos("me", limit=1)
+        user = await client.get_chat("me")
+        photos = await client.get_user_profile_photos(user.id, limit=1)
         photo = photos.photos[0]
         await message.reply_photo(photo.file_id, caption=f"""**نعم حبيبي :** {italy} 🥰❤\n**انا اسمي القميل :** {bot_name} 🥺🙈\n**رتبتك هي :** {rank}""", reply_markup=keyboard)
     else:
