@@ -5,7 +5,7 @@ from MatrixMusic import app
 
 
 # Replace the following line with your actual OWNER_ID
-OWNER_ID = 123456789
+OWNER_ID = 956893993
 
 
 @app.on_message(filters.command(['بوت'], prefixes=""))
