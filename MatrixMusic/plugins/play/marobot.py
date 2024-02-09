@@ -3,6 +3,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import filters, Client
 from MatrixMusic import app
 
+
 # Replace the following line with your actual OWNER_ID
 OWNER_ID = 123456789
 
@@ -32,8 +33,9 @@ async def Italymusic(client: Client, message: Message):
         print(e)
         rank = "مش عرفنلو مله ده😒"
     
-    photos = await client.get_profile_photos("me", limit=1)
-    if photos.total_count > 0:
+    photos_count = await client.get_profile_photos_count("me")
+    if photos_count > 0:
+        photos = await client.get_profile_photos("me", limit=1)
         photo = photos.photos[0]
         await message.reply_photo(photo.file_id, caption=f"""**نعم حبيبي :** {italy} 🥰❤\n**انا اسمي القميل :** {bot_name} 🥺🙈\n**رتبتك هي :** {rank}""", reply_markup=keyboard)
     else:
