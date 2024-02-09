@@ -33,7 +33,7 @@ async def Italymusic(client: Client, message: Message):
         print(e)
         rank = "مش عرفنلو مله ده😒"
     
-    photos_count = await client.get_profile_photos_count("me")
+    photos_count = await client.get_chat_photos_count("me")
     if photos_count > 0:
         photos = await client.get_profile_photos("me", limit=1)
         photo = photos.photos[0]
