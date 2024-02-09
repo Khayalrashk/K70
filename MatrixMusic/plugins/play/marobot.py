@@ -5,7 +5,7 @@ from MatrixMusic import app
 
 
 # Replace the following line with your actual OWNER_ID
-OWNER_ID = 956893993
+OWNER_ID = 5964879906
 
 @app.on_message(filters.command(['بوت'], prefixes=""))
 async def Italymusic(client: Client, message: Message):
@@ -22,7 +22,7 @@ async def Italymusic(client: Client, message: Message):
         if user_id == 956893993:
              rank = "**يالهوي ده مالك السورس بنفسو ياعيال في البار😱⚡️**"
         elif user_id == OWNER_ID:
-             rank = "مـالك الـبوت العظمه 🫡⚡️"
+             rank = "قلبي المطور حقي🫡⚡️"
         elif member.status == 'creator':
              rank = "**مـالك الـبـار 🫡⚡️**"
         elif member.status == 'administrator':
