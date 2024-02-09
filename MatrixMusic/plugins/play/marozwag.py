@@ -12,7 +12,7 @@ from pyrogram.enums import ParseMode, ChatMemberStatus
 
 iddof = []
 @app.on_message(
-     command(["داخستنی وەڵامدانەوە"])
+     command(["اغلاق الرد"])
      & filters.group
 
    
@@ -22,22 +22,22 @@ async def iddlock(client:Client, message:Message):
    
     get = await client.get_chat_member(message.chat.id, message.from_user.id)
     if message.from_user.id in dev:
-        rotba = "پڕۆگرامساز"
+        rotba = "مبرمج"
     if get.status in [ChatMemberStatus.OWNER]:
-        rotba= "سەرۆك"
+        rotba= "مالك"
     if get.status in [ChatMemberStatus.ADMINISTRATOR]:
-        rotba= "ئەدمین"
+        rotba= "ادمن"
     if get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR] and dev:
         if message.chat.id in iddof:
-            return await message.reply_text(f"**{message.from_user.mention}\n وەڵامدانەوە پێشتر داخراوە♥️❎•**")
+            return await message.reply_text(f"**{message.from_user.mention}\n الرد مغلق بالفعل ♥❎•**")
         iddof.append(message.chat.id)
-        return await message.reply_text(f"**بە سەرکەوتوویی فەرمانی وەڵامدانەوە داخرا\n\n لەلایەن {rotba} ←{message.from_user.mention}♥️❎•**")
+        return await message.reply_text(f"**تم إغلاق أمر الاستجابة بنجاح\n\n بواسطة {rotba} ←{message.from_user.mention}♥️❎•**")
     else:
-        return await message.reply_text(f"** {message.from_user.mention} تۆ ئەدمین نیت لێرە💔•**")
+        return await message.reply_text(f"** {message.from_user.mention} أنت لست المشرف هنا💔•**")
 
          
 @app.on_message(
-    command(["کردنەوەی وەڵامدانەوە"])
+    command(["فتح الرد"])
     & filters.group
 )
 async def idljjopen(client:Client, message:Message):
@@ -45,18 +45,18 @@ async def idljjopen(client:Client, message:Message):
     
     get = await client.get_chat_member(message.chat.id, message.from_user.id)
     if message.from_user.id in dev:
-        rotba = "پڕۆگرامساز"
+        rotba = "مبرمج"
     if get.status in [ChatMemberStatus.OWNER]:
-        rotba= "سەرۆك"
+        rotba= "مالك"
     if get.status in [ChatMemberStatus.ADMINISTRATOR]:
-        rotba= "ئەدمین"
+        rotba= "ادمن"
     if get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR] and  dev:
         if not message.chat.id in iddof:
-            return await message.reply_text(f"**{message.from_user.mention}\n وەڵامدانەوە پێشتر کراوەتەوە♥️✅•**")
+            return await message.reply_text(f"**{message.from_user.mention}\n الرد مفتوح بالفعل♥️✅•**")
         iddof.remove(message.chat.id)
-        return await message.reply_text(f"**بە سەرکەوتوویی فەرمانی وەڵامدانەوە کرایەوە\n\n لەلایەن {rotba} ←{message.from_user.mention}♥️✅•**")
+        return await message.reply_text(f"**تم فتح أمر الاستجابة بنجاح\n\n بواسطة {rotba} ←{message.from_user.mention}♥️✅•**")
     else:
-        return await message.reply_text(f"** {message.from_user.mention} تۆ ئەدمین نیت لێرە💔•**")
+        return await message.reply_text(f"** {message.from_user.mention} أنت لست المشرف هنا💔•**")
 @app.on_message(command(['ز','زوجني']))
 def iddd(client:Client, message:Message):
     chat_id = message.chat.id
