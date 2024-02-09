@@ -4,7 +4,7 @@ import re
 from strings.filters import command
 from pyrogram import Client
 from pyrogram.types import Message
-from DAXXMUSIC import app
+from MatrixMusic import app
 
 @app.on_message(command("زخرفه"))
 async def zahrafa(c: Client, m: Message):
