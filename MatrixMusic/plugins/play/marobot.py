@@ -33,14 +33,4 @@ async def Italymusic(client: Client, message: Message):
         print(e)
         rank = "مش عرفنلو مله ده😒"
     
-    await message.reply_text(f"أرسل لي صورة ملف تعريفية حتى أستطيع عرضها مع رسالتك.")
-
-    # Wait for the user to send their profile photo
-    photo_message = await client.listen(filters.photo & filters.private)
-
-    # Get the photo file id from the received photo message
-    photo_file_id = photo_message.photo.file_id
-
-    # Reply to the user with their profile photo
-    await message.reply_photo(photo_file_id, caption=f"""**نعم حبيبي :** {italy} 🥰❤\n**انا اسمي القميل :** {bot_name} 🥺🙈\n**رتبتك هي :** {rank}""", reply_markup=keyboard)
-
+    await message.reply_text(f"""**نعم حبيبي :** {italy} 🥰❤\n**انا اسمي القميل :** {bot_name} 🥺🙈\n**رتبتك هي :** {rank}""", reply_markup=keyboard)
