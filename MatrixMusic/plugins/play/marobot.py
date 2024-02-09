@@ -22,7 +22,7 @@ async def Italymusic(client: Client, message: Message):
         if user_id == 956893993:
              rank = "**يالهوي ده مالك السورس بنفسو ياعيال في البار😱⚡️**"
         elif user_id == OWNER_ID:
-             rank = "قلبي المطور حقي🫡⚡️"
+             rank = "مـالك الـبوت العظمه 🫡⚡️"
         elif member.status == 'creator':
              rank = "**مـالك الـبـار 🫡⚡️**"
         elif member.status == 'administrator':
@@ -33,4 +33,11 @@ async def Italymusic(client: Client, message: Message):
         print(e)
         rank = "مش عرفنلو مله ده😒"
     
-    await message.reply_text(f"""**نعم حبيبي :** {italy} 🥰❤\n**انا اسمي القميل :** {bot_name} 🥺🙈\n**رتبتك هي :** {rank}""", reply_markup=keyboard)
+    # إرسال الصورة المرفقة مع الرد النصي
+    await client.send_photo(
+        chat_id=message.chat.id,
+        photo="https://telegra.ph/file/f698f60484b7aef0d6f29.jpg",
+        caption=f"""**نعم حبيبي :** {italy} 🥰❤\n**انا اسمي القميل :** {bot_name} 🥺🙈\n**رتبتك هي :** {rank}""",
+        reply_markup=keyboard
+    )
+
