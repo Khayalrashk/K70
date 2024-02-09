@@ -67,7 +67,7 @@ def iddd(client:Client, message:Message):
         if not member.user.is_bot
     ]
     random_member = random.choice(members)
-    random_member_mention = f"[{random_member.user.first_name}](tg://openmessage?user_id={random_member.user.id})"
+    random_member_mention = f"[{random_member.user.first_name}]( tg://openmessage?user_id={random_member.user.id} )"
     random_message = random.choice([
         f"• اخترت لك هذا الشخص \n {random_member_mention} \n 🙈♥️",
         f"• اخترت لك هذا الشخص \n {random_member_mention} \n **"
