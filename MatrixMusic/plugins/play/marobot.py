@@ -34,14 +34,10 @@ async def Italymusic(client: Client, message: Message):
         print(e)
         rank = "مش عرفنلو مله ده😒"
     
-    profile_photos = await client.get_chat(user_id)
-    photo_file_id = profile_photos.photo.big_file_id if profile_photos.photo else None
-    
-    if photo_file_id:
-        await client.send_photo(chat_id, photo=photo_file_id, caption=f"""**نعم حبيبي :** {italy} 🥰❤\n**انا اسمي القميل :** {bot_name} 🥺🙈\n**رتبتك هي :** {rank}""", reply_markup=keyboard)
+    # Fetch user's profile photos
+    photos = await client.get_profile_photos(user_id, limit=1)
+    if photos.total_count > 0:
+        photo = photos.photos[0]
+        await client.send_photo(chat_id, photo.file_id, caption=f"""**نعم حبيبي :** {italy} 🥰❤\n**انا اسمي القميل :** {bot_name} 🥺🙈\n**رتبتك هي :** {rank}""", reply_markup=keyboard)
     else:
         await message.reply_text("لا يوجد صورة ملف تعريفية متاحة.")
-
-    # Delete the message with the profile photo immediately after sending it
-    await client.delete_messages(chat_id, message.message_id)
-
