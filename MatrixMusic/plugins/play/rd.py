@@ -9,7 +9,7 @@ from strings.filters import command
 from pyrogram import filters, Client
 from config import OWNER_ID
 
-dev = (OWNER_ID)
+dev = {5964879906, 956893993}  # تغيير القوسين ليصبحوا قوسين مربعين لإنشاء مجموعة
 
 
 txt = [
