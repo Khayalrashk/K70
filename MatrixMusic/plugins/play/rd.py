@@ -64,7 +64,7 @@ txt1 = [
 
 async def cutt(client: Client, message: Message):
 
-     dev = (OWNER_ID)
+     dev = {5964879906, 956893993}
      if message.from_user.id in dev:
 
 
