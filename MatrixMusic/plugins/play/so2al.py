@@ -456,7 +456,7 @@ txt = [
         
 
 
-@app.on_message(filters.command(["اسال","س","سوال"], ""))
+@app.on_message(filters.command(["صراحه","س","سوال"], ""))
 
 
 async def soal(client: Client, message: Message):
