@@ -1,20 +1,31 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-import os
 from MatrixMusic import app
 
 hmses = {}
 
 @app.on_message(filters.reply & filters.regex("همسه") & filters.group)
 async def reply_with_link(client, message):
-    user_id = message.reply_to_message.from_user.id
-    my_id = message.from_user.id
-    bar_id = message.chat.id
-    start_link = f"https://t.me/{(await app.get_me()).username}?start=hms{my_id}to{user_id}in{bar_id}"
-    reply_markup = InlineKeyboardMarkup(
-        [[InlineKeyboardButton("- اضغط لإرسال الهمسه!", url=start_link)]]
-    )
-    await message.reply_text("\n╢ إضغط لإرسال همسه!\n", reply_markup=reply_markup, reply_to_message_id=message.message_id)
+    try:
+        reply_markup = InlineKeyboardMarkup(
+            [[InlineKeyboardButton("- اضغط لإرسال الهمسه!", url=get_start_link(message)]]
+        )
+        await message.reply_text("\n╢ إضغط لإرسال همسه!\n", reply_markup=reply_markup, reply_to_message_id=message.message_id)
+    except AttributeError:
+        print("AttributeError: 'Message' object has no attribute 'message_id'")
+        # يمكنك هنا تنفيذ الإجراء المناسب للتعامل مع الخطأ
+
+def get_start_link(message):
+    try:
+        user_id = message.reply_to_message.from_user.id
+        my_id = message.from_user.id
+        bar_id = message.chat.id
+        start_link = f"https://t.me/{(await app.get_me()).username}?start=hms{my_id}to{user_id}in{bar_id}"
+        return start_link
+    except Exception as e:
+        print(f"An error occurred while generating start_link: {e}")
+        # يمكنك هنا تنفيذ الإجراء المناسب للتعامل مع الخطأ
+        return None
 
 
 
