@@ -61,7 +61,7 @@ async def idljjopen(client:Client, message:Message):
         return await message.reply_text(f"**يا {message.from_user.mention} انت لست مشرفا هنا**")
 ##|𐇮 𝑴𝑶𝑫𝒀 𖠮🚸𖠮 آلـۘهہؚيـٰـ‌ُـُ໋۠بـ໋ۘ۠ه 𐇮☬, [23/12/44 03:32 ص]  
 
-@app.on_message(filters.command(['زوجني'], prefixes=""))
+@app.on_message(filters.command(['زوج'], prefixes=""))
 def call_random_member(client, message):
     chat_id = message.chat.id
     members = [
