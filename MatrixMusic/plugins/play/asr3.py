@@ -18,4 +18,4 @@ def check(client, message):
     word = message.text
     for w in words:
         if word == w:
-        	message.reply("صح")
+        	message.reply("☑️اجابه صحيحه")
