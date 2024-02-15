@@ -71,7 +71,30 @@ async def yas(client, message):
             ]
         ),
     )
-    
+
+
+@app.on_message(
+    command(["منه","منوش","مانو"])
+    & filters.group
+  
+)
+async def yas(client, message):
+    usr = await client.get_chat("Toxic_menvv")
+    name = usr.first_name
+    photo = await app.download_media(usr.photo.big_file_id)
+    await message.reply_photo(photo,       caption=f"– – – – – – – – – – – – – – – – – –\n↯︙𝖣𝖾𝗏 ↬ ⦗ {name} ⦘\n↯︙𝖴𝗌𝖤𝗋 ↬ ⦗ @{usr.username} ⦘\n↯︙𝖨𝖣 ↬ ⦗ {usr.id} ⦘\n↯︙𝖡𝗂𝖮 ↬ ⦗ {usr.bio} ⦘\n– – – – – – – – – – – – – – – – – –",  
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        name, url=f"https://t.me/{usr.username}")
+                ],
+            ]
+        ),
+    )
+
+
+
 @app.on_message(
     command(["مطورين","مطورين السورس","المطورين","سورس","السورس"])
   
