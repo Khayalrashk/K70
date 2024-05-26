@@ -33,12 +33,12 @@ def get_file_id(msg: Message):
                 return obj
 
 @app.on_message(
-    command(["المطور","البوب","امير","مطور السورس","مبرمج السورس"])
+    command(["خيال","مطور السورس","مبرمج السورس"])
     & filters.group
   
 )
 async def yas(client, message):
-    usr = await client.get_chat("VIP_ALPOP")
+    usr = await client.get_chat("F_A_6")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
     await message.reply_photo(photo,       caption=f"– – – – – – – – – – – – – – – – – –\n↯︙𝖣𝖾𝗏 ↬ ⦗ {name} ⦘\n↯︙𝖴𝗌𝖤𝗋 ↬ ⦗ @{usr.username} ⦘\n↯︙𝖨𝖣 ↬ ⦗ {usr.id} ⦘\n↯︙𝖡𝗂𝖮 ↬ ⦗ {usr.bio} ⦘\n– – – – – – – – – – – – – – – – – –",  
@@ -53,12 +53,12 @@ async def yas(client, message):
     )
     
 @app.on_message(
-    command(["المطور مارو","مارو","المبرمج"])
+    command(["المطور لارين","لارين","مالك السورس"])
     & filters.group
   
 )
 async def yas(client, message):
-    usr = await client.get_chat("j_s_9")
+    usr = await client.get_chat("lio9_o")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
     await message.reply_photo(photo,       caption=f"– – – – – – – – – – – – – – – – – –\n↯︙𝖣𝖾𝗏 ↬ ⦗ {name} ⦘\n↯︙𝖴𝗌𝖤𝗋 ↬ ⦗ @{usr.username} ⦘\n↯︙𝖨𝖣 ↬ ⦗ {usr.id} ⦘\n↯︙𝖡𝗂𝖮 ↬ ⦗ {usr.bio} ⦘\n– – – – – – – – – – – – – – – – – –",  
@@ -74,12 +74,12 @@ async def yas(client, message):
 
 
 @app.on_message(
-    command(["منه","منوش","مانو"])
+    command(["المطور حاقد","حاقد","مساعد المطور"])
     & filters.group
   
 )
 async def yas(client, message):
-    usr = await client.get_chat("Toxic_menvv")
+    usr = await client.get_chat("V60_l")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
     await message.reply_photo(photo,       caption=f"– – – – – – – – – – – – – – – – – –\n↯︙𝖣𝖾𝗏 ↬ ⦗ {name} ⦘\n↯︙𝖴𝗌𝖤𝗋 ↬ ⦗ @{usr.username} ⦘\n↯︙𝖨𝖣 ↬ ⦗ {usr.id} ⦘\n↯︙𝖡𝗂𝖮 ↬ ⦗ {usr.bio} ⦘\n– – – – – – – – – – – – – – – – – –",  
@@ -102,18 +102,18 @@ async def yas(client, message):
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/f698f60484b7aef0d6f29.jpg",
-        caption=f"""↯︙اهلا بك عزيزي {message.from_user.mention}\n↯︙مطورين سورس البوب ميوزك""",
+        caption=f"""↯︙اهلا بك عزيزي {message.from_user.mention}\n↯︙مطورين سورس لاريـن ميوزك""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "‹ : 𝗗𝗘𝗩 𝗔𝗟𝗣𝗢𝗣 : ›", url=f"https://t.me/VIP_ALPOP"), 
+                        "✬ 𝐃𝐞𝐯 𝐊𝐡𝐚𝐲𝐚𝐥 ✬", url=f"https://t.me/F_A_6"), 
                  ],[
                     InlineKeyboardButton(
-                        "‹ : 𝗗𝗘𝗩 𝗠𝗔𝗥𝗢² : ›", url=f"https://t.me/j_s_9"),
+                        "✬ 𝐎𝐰𝐧𝐞𝐫 𝐋𝐚𝐫𝐢𝐧 ✬", url=f"https://t.me/lio9_o"),
                 ],[
                     InlineKeyboardButton(
-                        "‹ : 𝗦𝗢𝗨𝗥𝗖𝗘 𝗔𝗟𝗣𝗢𝗣 : ›", url=f"https://t.me/SOURCE_ALPOP"),
+                        "✬  𝐬𝐨𝐮𝐫𝐜𝐞 𝐥𝐨𝐥 🧚‍♀  ✬", url=f"https://t.me/K55DD"),
                 ],
 
             ]
