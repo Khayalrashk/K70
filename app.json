@@ -78,12 +78,17 @@
         "value": "-100",
         "required": true
       }
-      ],
-      "formation": {
-          "worker": {
-              "quantity": 1,
-              "size": "basic"
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
           }
-      },
+      ],
       "stack": "container"
   }
