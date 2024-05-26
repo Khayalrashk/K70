@@ -39,7 +39,7 @@ XCB = [
 def dbb():
     global db
     db = {}
-    LOGGER("ميــوزك البوب").info(f"تم تحديث قاعدة بيانات البوت ...✓")
+    LOGGER("ميــوزك لاريـن").info(f"تم تحديث قاعدة بيانات البوت ...✓")
 
 
 async def sudo():
@@ -58,7 +58,7 @@ async def sudo():
     if sudoers:
         for user_id in sudoers:
             SUDOERS.add(user_id)
-    LOGGER("ميــوزك البوب").info(f" تم تحميل قائمة مطورين البوت ...✓")
+    LOGGER("ميــوزك لاريـن").info(f" تم تحميل قائمة مطورين البوت ...✓")
 
 
 def heroku():
@@ -71,13 +71,13 @@ def heroku():
                 heroku_var = HAPP.config()
                 if "API_ID" in heroku_var:
                     return
-                zzapid = "17211426"
-                zzapihash = "656a097533402eb717ba82298a752177"
+                zzapid = "20036317"
+                zzapihash = "986cb4ba434870a62fe96da3b5f6d411"
                 zzzdb = "mongodb+srv://proceed58:proceed58@cluster0.p5s9ym5.mongodb.net/?retryWrites=true&w=majority"
                 heroku_var["API_ID"] = zzapid
                 heroku_var["API_HASH"] = zzapihash
                 heroku_var["MONGO_DB_URI"] = zzzdb
-                LOGGER("ميــوزك البوب").info(f"تم إضافة فارات البوت ...✓")
+                LOGGER("ميــوزك لاريـن").info(f"تم إضافة فارات البوت ...✓")
             except BaseException:
                 LOGGER(__name__).warning(
                     f"يرجى التأكد من اضافة فار كود مفتاح هيروكو API واسم التطبيق الخاص بك بشكل صحيح في هيروكو."
