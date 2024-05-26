@@ -1,4 +1,5 @@
 import math
+import config
 
 from pyrogram.types import InlineKeyboardButton
 
@@ -53,22 +54,21 @@ def stream_markup_timer(_, chat_id, played, dur):
         bar = "────────⦷─"
     else:
         bar = "─────────⦷"
-    buttons = [
-        [
-            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="↻", callback_data=f"ADMIN Replay|{chat_id}"),
-            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
-        ],
-        [
+buttons = [
+                [
             InlineKeyboardButton(
                 text=f"{played} {bar} {dur}",
                 callback_data="GetTimer",
             )
-        ],
-        [InlineKeyboardButton(text=_["MATRIX_BUTTON"], url=f"https://t.me/source_alpop")],
-        [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
+        ],[
+            InlineKeyboardButton(text="إستئناف ⋆", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton(text="إيقاف مؤقت", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="⋆ إعاده", callback_data=f"ADMIN Replay|{chat_id}"),
+        ],[
+            InlineKeyboardButton(text="⋆ تخطي ⋆", callback_data=f"ADMIN Skip|{chat_id}"),
+            InlineKeyboardButton(text="⋆ توقف ⋆", callback_data=f"ADMIN Stop|{chat_id}"),
+        ],[
+            InlineKeyboardButton(text=config.CHANNEL_NAME, url=config.CHANNEL_LINK)],
     ]
     return buttons
 
@@ -76,14 +76,14 @@ def stream_markup_timer(_, chat_id, played, dur):
 def stream_markup(_, chat_id):
     buttons = [
         [
-            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="↻", callback_data=f"ADMIN Replay|{chat_id}"),
-            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
-        ],
-        [InlineKeyboardButton(text=_["MATRIX_BUTTON"], url=f"https://t.me/source_alpop")],
-        [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
+            InlineKeyboardButton(text="إستئناف ⋆", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton(text="إيقاف مؤقت", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="⋆ إعاده", callback_data=f"ADMIN Replay|{chat_id}"),
+        ],[
+            InlineKeyboardButton(text="⋆ تخطي ⋆", callback_data=f"ADMIN Skip|{chat_id}"),
+            InlineKeyboardButton(text="⋆ توقف ⋆", callback_data=f"ADMIN Stop|{chat_id}"),
+        ],[
+            InlineKeyboardButton(text=config.CHANNEL_NAME, url=config.CHANNEL_LINK)],
     ]
     return buttons
 
@@ -93,14 +93,13 @@ def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
         [
             InlineKeyboardButton(
                 text=_["P_B_1"],
-                callback_data=f"Playlists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
+                callback_data=f"ModyPlaylists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
             ),
             InlineKeyboardButton(
                 text=_["P_B_2"],
-                callback_data=f"Playlists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
+                callback_data=f"ModyPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
             ),
         ],
-        [InlineKeyboardButton(text=_["MATRIX_BUTTON"], url=f"https://t.me/source_alpop")],
         [
             InlineKeyboardButton(
                 text=_["CLOSE_BUTTON"],
@@ -119,7 +118,6 @@ def livestream_markup(_, videoid, user_id, mode, channel, fplay):
                 callback_data=f"LiveStream {videoid}|{user_id}|{mode}|{channel}|{fplay}",
             ),
         ],
-        [InlineKeyboardButton(text=_["MATRIX_BUTTON"], url=f"https://t.me/source_alpop")],
         [
             InlineKeyboardButton(
                 text=_["CLOSE_BUTTON"],
@@ -153,10 +151,9 @@ def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
                 callback_data=f"forceclose {query}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="▷",
+                text="𖣂 𝒓𝒆𝒔𝒖𝒎𝒆 𖣂",
                 callback_data=f"slider F|{query_type}|{query}|{user_id}|{channel}|{fplay}",
             ),
         ],
     ]
     return buttons
-    
