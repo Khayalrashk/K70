@@ -28,6 +28,13 @@ LOGGER_ID = int(getenv("LOGGER_ID", None))
 # Get this value from @FallenxBot on Telegram by /id
 OWNER_ID = int(getenv("OWNER_ID", 5901732027))
 
+# Fill this variable if your upstream repository is private
+
+CHANNEL_NAME = getenv("CHANNEL_NAME", "• 𝐒𝐨𝐮𝐫𝐜𝐞 𝐋𝐚𝐫𝐢𝐧 🎧")
+CHANNEL_LINK = getenv("CHANNEL_LINK", "https://t.me/sourcelarin")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/sourcelarin")
+
+
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
